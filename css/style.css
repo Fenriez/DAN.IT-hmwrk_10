@@ -1,0 +1,141 @@
+/* TAGS */
+html {
+    font-family: 'Roboto', sans-serif;    
+    /* font-family: 'Open Sans', sans-serif; */
+    font-size: 10px;
+}
+html, body {
+    height: 100%;
+}
+
+/* CLASSES */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px 415px 715px 680px 580px 585px;
+    height: 100%;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* HEADER */
+.header .parallax__layer--base {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.menu_wrap {
+    margin-top: 32px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family:  'Roboto', sans-serif; 
+    font-size: 3.6rem;
+    line-height: 3;
+    color: #424f57;
+    text-transform: capitalize;
+}
+.logo span {
+    color: #14afca;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.top_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+.menu-item {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3e4b4e;
+    text-transform: uppercase;
+}
+
+.slogan {
+    max-width: 980px;
+    margin: 0 auto;
+    font-family: 'Futura BT', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 75px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    
+    align-content: center;
+}
+
+.header .parallax__layer--back {
+    background: url(../images/bg/bg-buildings.jpg) center no-repeat;
+    background-size: cover;
+}
+
+
+
+.parallax__group {
+    /* background-color: red; */
+}
+
+.about,
+.team,
+.benefits {
+    z-index: 10;
+}
+
+
+
+
+
+
+
+/* Triangles */
+.chevron_top,
+.chevron_bottom {
+    position: relative;
+}
+
+.chevron_top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 82px solid white;
+}
+.chevron_bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50vw solid white;
+    border-right: 50vw solid white;
+    border-top: 82px solid transparent;
+}
+
+@font-face {
+    font-family: 'Futura BT';
+    src: url(../fonts/Futura\ Heavy\ font.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
