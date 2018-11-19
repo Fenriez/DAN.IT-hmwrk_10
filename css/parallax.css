@@ -20,8 +20,5 @@
     transform: translateZ(0);
 }
 .parallax__layer--back {
-    transform: translateZ(-49px) scale(2);
-}
-.parallax__layer--back-a {
-    transform: translateZ(-49px) scale(2);
+    transform: translateZ(-49px) scaleX(1.5) scaleY(1.6);
 }
