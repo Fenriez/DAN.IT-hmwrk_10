@@ -11,8 +11,12 @@ html, body {
 .wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 90vh 62vh 100vh 95vh 86vh 88vh;
+    grid-template-rows: 90vh 62vh 100vh 85vh 86vh 48vh auto;
     height: 100%;
+}
+
+h5.color--white {
+    color: #ffffff;
 }
 
 .overlay {
@@ -20,9 +24,8 @@ html, body {
     background-size: cover;
     height: 100%;
     width: 100%;
-    /* background-color: rgba(0, 0, 0, 0.8); */
+    background-color: rgba(0, 0, 0, 0.1);
 }
-
 
 /* HEADER */
 .header .parallax__layer--base {
@@ -148,10 +151,6 @@ html, body {
     justify-content: center;
 }
 
-.companies .title h5 {
-    color: #ffffff;
-}
-
 .companies__logo_block {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -178,15 +177,71 @@ html, body {
     background-position: 50% 20%;
     background-size: cover;
 }
+.companies .overlay {
+    background-color: rgba(11, 11, 11, 0.7);
+}
 
 /* TEAM */
 .team .parallax__layer--base {
-    
+    display: grid;
+    grid-template-columns: 75%;
+    grid-auto-rows: max-content;
+    grid-row-gap: 45px;
+    align-content: center;
+    justify-content: center;
 }
 
+.team_members {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 280px));
+    grid-row-gap: 35px;
+    justify-content: space-around;
+}
+
+.member_card {
+    text-align: center;
+}
+.member_card p {
+    padding-top: 25px;
+    font-family: 'Roboto', sans-serif;
+    color:  #424f57;
+    font-size: 1.5rem;
+    line-height: 28px;
+}
 
 /* TESTIMONIALS */
+.testimonials .parallax__layer--base {
+    display: grid;
+    grid-template-columns: 55%;
+    grid-auto-rows: max-content;
+    grid-row-gap: 45px;
+    align-content: center;
+    justify-content: center;
+}
 
+.quote {
+    font-family: 'OpenSans', sans-serif;
+    color:  #d3cccc;
+    font-size: 1.6rem;
+    font-style: italic;
+    line-height: 28px;
+    text-align: center;    
+}
+.quote_author {
+    margin-top: 20px;
+    padding-right: 100px;
+    font-family: 'OpenSans', sans-serif;
+    color:  #ffffff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 24px;
+    text-align: right;
+}
+.quote_author::before {
+    content: '-';
+    margin-right: 8px;
+}
 
 .testimonials .parallax__layer--back {
     background: url(../images/bg/bg-boss.jpg) no-repeat;    
@@ -194,14 +249,49 @@ html, body {
     background-size: cover;
 }
 
+/* BENEFITS */
+.benefits .parallax__layer--base {
+    display: grid;
+    grid-template-columns: 52%;
+    grid-auto-rows: max-content;
+    grid-row-gap: 45px;
+    align-content: center;
+    justify-content: center;
+}
 
+.benefits h4 {
+    font-family: 'Roboto', sans-serif;
+    color:  #424f57;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;    
+}
+
+/* FOOTER */
+.footer {
+    display: grid;
+    grid-template-columns: minmax(386px, 25%);
+    justify-content: center;
+    padding-bottom: 100px;
+}
+.copy {
+    font-family: 'OpenSans', sans-serif;
+    color:  #3d3c3c;
+    font-size: 1.4rem;
+    line-height: 24px;
+    text-align: center;    
+}
+.copy span {
+    font-size: 1.6rem;
+    font-weight: 700;  
+}
 
 /* Triangles */
 .chevron_top,
 .chevron_bottom {
     position: relative;
 }
-
 .chevron_top::before {
     content: "";
     position: absolute;
@@ -225,6 +315,7 @@ html, body {
     border-top: 82px solid white;
 }
 
+/* Fonts */
 @font-face {
     font-family: 'Futura BT';
     src: url(../fonts/Futura\ Heavy\ font.ttf);
