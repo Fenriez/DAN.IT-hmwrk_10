@@ -1,6 +1,5 @@
 /* TAGS */
 html {   
-    /* font-family: 'Open Sans', sans-serif; */
     font-size: 10px;
 }
 html, body {
@@ -13,10 +12,6 @@ html, body {
     grid-template-columns: 1fr;
     grid-template-rows: 90vh 62vh 100vh 85vh 86vh 48vh auto;
     height: 100%;
-}
-
-h5.color--white {
-    color: #ffffff;
 }
 
 .overlay {
@@ -70,7 +65,12 @@ h5.color--white {
     font-size: 1.5rem;
     font-weight: 700;
     color: #3e4b4e;
+    transition: 0.4s;
     text-transform: uppercase;
+}
+.menu-item:hover {
+    color: #14afca;
+    transition: 0.4s;
 }
 
 .slogan {
@@ -82,8 +82,7 @@ h5.color--white {
     line-height: 75px;
     color: #ffffff;
     text-transform: uppercase;
-    text-align: center;
-    
+    text-align: center;    
     align-content: center;
 }
 
@@ -105,14 +104,16 @@ h5.color--white {
     height: 100%;
 }
 
-/* ABOUT */
-.about .parallax__layer--base {
+.section_grid {
     display: grid;
-    grid-template-columns: 65%;
-    grid-auto-rows: max-content;
-    grid-row-gap: 42px;
     align-content: center;
     justify-content: center;
+}
+
+/* ABOUT */
+.about .parallax__layer--base {
+    grid-template-columns: 65%;
+    grid-row-gap: 42px;
 }
 
 .title {
@@ -143,12 +144,12 @@ h5.color--white {
 
 /* COMPANIES */
 .companies .parallax__layer--base {
-    display: grid;
     grid-template-columns: 75%;
-    grid-auto-rows: max-content;
     grid-row-gap: 60px;
-    align-content: center;
-    justify-content: center;
+}
+
+.companies .title h5 {
+    color: #ffffff;
 }
 
 .companies__logo_block {
@@ -183,12 +184,8 @@ h5.color--white {
 
 /* TEAM */
 .team .parallax__layer--base {
-    display: grid;
     grid-template-columns: 75%;
-    grid-auto-rows: max-content;
     grid-row-gap: 45px;
-    align-content: center;
-    justify-content: center;
 }
 
 .team_members {
@@ -211,12 +208,12 @@ h5.color--white {
 
 /* TESTIMONIALS */
 .testimonials .parallax__layer--base {
-    display: grid;
     grid-template-columns: 55%;
-    grid-auto-rows: max-content;
     grid-row-gap: 45px;
-    align-content: center;
-    justify-content: center;
+}
+
+.testimonials .title h5 {
+    color: #ffffff;
 }
 
 .quote {
@@ -251,12 +248,8 @@ h5.color--white {
 
 /* BENEFITS */
 .benefits .parallax__layer--base {
-    display: grid;
     grid-template-columns: 52%;
-    grid-auto-rows: max-content;
     grid-row-gap: 45px;
-    align-content: center;
-    justify-content: center;
 }
 
 .benefits h4 {
@@ -265,13 +258,14 @@ h5.color--white {
     font-size: 3rem;
     font-weight: 700;
     line-height: 48px;
-    text-align: center;    
+    text-align: center;   
+    text-transform: uppercase; 
 }
 
 /* FOOTER */
 .footer {
     display: grid;
-    grid-template-columns: minmax(386px, 25%);
+    grid-template-columns: 386px;
     justify-content: center;
     padding-bottom: 100px;
 }
